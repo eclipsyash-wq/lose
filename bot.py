@@ -87,7 +87,7 @@ def premium_emoji(text):
 # ==================== BOT CONFIGURATION ====================
 API_ID = 32143521
 API_HASH = '273161fdfe0b925e1baca74825672fb'
-BOT_TOKEN = '9019817625:AAGHayUa7Al26vYMhdTav-Ynf_RT6QRHjdU90'
+BOT_TOKEN = '9003076643:AAFdizhYHk1unaDPzdLDk-QsZ1OW0YGpiRk'
 
 PREMIUM_FILE = 'premium.txt'
 SITES_FILE = 'sites.txt'
