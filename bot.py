@@ -98,7 +98,7 @@ STATS_FILE = 'stats.json'
 START_VIDEO_FILE = 'start_video.txt'
 GIFS_FILE = 'gifs.txt'
 
-WORKER_COUNT = 150
+WORKER_COUNT = 40
 PROGRESS_UPDATE_INTERVAL = 2.0
 MAX_RETRIES = 15
 
@@ -107,6 +107,8 @@ active_sessions = {}
 http_session = None
 _last_progress_update = {}
 _last_progress_text = {}
+API_FAIL_COUNT = 0
+API_FAIL_LOCK = asyncio.Lock()
 
 def get_http_session():
     global http_session
@@ -572,8 +574,6 @@ async def check_card(card, site, proxy):
             'site': site
         }
 
-API_FAIL_COUNT = 0
-API_FAIL_LOCK = asyncio.Lock()
 
 async def check_card_with_retry(card, sites, proxies, max_retries=MAX_RETRIES):
     if not sites:
@@ -702,7 +702,7 @@ async def send_start_video_and_welcome(user_id, username, page="home"):
 <b>🔗 𝗚𝗮𝘁𝗲𝘄𝗮𝘆  ·</b>  Stripe  ·  Shopify  ·  Adyen
 <b>🛡 𝟯𝗗𝗦      ·</b>  Bypass Supported
 <b>🌐 𝗣𝗿𝗼𝘅𝘆    ·</b>  HTTP  ·  SOCKS4  ·  SOCKS5
-<b>⚡ 𝗦𝗽𝗲𝗲𝗱    ·</b>  150 Workers  ·  Rotating
+<b>⚡ 𝗦𝗽𝗲𝗲𝗱    ·</b>  40 Workers  ·  Rotating
 
 <b>━━━━━━━━━━━━━━━━━━━━━━</b>
 <b>🚀 @Rowdyking07</b>"""
