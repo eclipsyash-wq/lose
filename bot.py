@@ -16,12 +16,8 @@ from collections import Counter
 
 # ==================== DIRECT API ENDPOINTS ====================
 SHOPIFY_APIS = [
-  "http://insaneee7xshopiify-production-38dc.up.railway.app/shopify",
-  "http://chirag-x-shopify-production.up.railway.app/shopify",
-  "http://chirag-x-shopify-production-6ead.up.railway.app/shopify",
-  "http://chirag-x-shopify-production-e9ef.up.railway.app/shopify",
-  "http://insaneee7xshopiify-production-38dc.up.railway.app/shopify",
-  "https://new-one.up.railway.app/shopii",
+  "https://autoshopifychk.onrender.com/shopify?site=&cc=&proxy=",
+  "https://bhikari-production-bf277.up.railway.app/shopify?site=&cc=&proxy=",
 ]
 
 # ==================== PREMIUM CUSTOM EMOJI IDS ====================
